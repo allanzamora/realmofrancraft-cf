@@ -1,0 +1,16 @@
+name = "rancraft-pvp"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+[[durable_objects.bindings]]
+name = "GAME"
+class_name = "Game"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Game"]
+
+# Optional: where guilds / market are saved (Firebase Realtime Database). Add FIREBASE_SECRET in the Cloudflare dashboard
+# under Settings > Variables and Secrets (type: Secret) if your database rules are not public.
+[vars]
+FIREBASE_DB_URL = "https://html-codes-encrytper.firebaseio.com"
